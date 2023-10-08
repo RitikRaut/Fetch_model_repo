@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch 2022 Predictions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="login">
+        <h1><center>Fetch</h1>
+        <h2><center>Predictions for scanned receipts for each month</center></h2>
+        <form action="{{url_for('predict')}}" method="post">
+            <center><input type="text" name="receipts" placeholder="receipts" required="required">
+            <center><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+    
+        <b>{{prediction_text}}</b>
+        
+        <!-- Display the Plotly chart here -->
+        <div>{{ plotly_chart | safe }}</div>
+    </div>
+</body>
+</html>

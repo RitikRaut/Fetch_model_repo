@@ -1,0 +1,16 @@
+/* CSS code */
+body {
+    /* Fallback background color */
+    background: yellowgreen;
+
+}
+.content {
+    max-width: 600px;
+    margin: 0 auto;  
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
