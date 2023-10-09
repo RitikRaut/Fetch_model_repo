@@ -43,7 +43,7 @@ The project is structured as follows:
 
 1. Clone this repository:
 
-git clone -b master https://github.com/RitikRaut/Fetch_model_repo.git
+git clone https://github.com/RitikRaut/Fetch_model_repo.git
 
 
 3. Install the required Python packages:
