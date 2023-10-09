@@ -14,7 +14,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        input_values = request.form['receipts']
+        input_values = request.form['months']
         input_values = [int(value.strip()) for value in input_values.split(',')]
     except ValueError:
         return render_template('index.html', prediction_text='Invalid input. Please enter valid numbers separated by commas.')
@@ -34,7 +34,7 @@ def predict():
 
     # Convert the Plotly chart to HTML and pass it to the template
     plotly_chart = fig.to_html(full_html=False)
-    return render_template('index.html', prediction_text=f'Monthly predictions for Number of Receipts: {input_values}', plotly_chart=plotly_chart)
+    return render_template('index.html', prediction_text=f'Monthly predictions for Number of months: {input_values}', plotly_chart=plotly_chart)
 
 if __name__ == '__main__':
     app.run(debug=True)
